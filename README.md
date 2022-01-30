@@ -71,8 +71,6 @@ const color = new Color('#fba91a');
 
 All the utility functions to manipulate the colors.
 
-### Top level methods and namespaces
-
 ```js
 // RGB
 ColorUtility.rgb.isValid;
@@ -178,18 +176,16 @@ An object where the keys are the tones (E.g. 40) and the value is an instance of
 */
 ```
 
-<div style="text-align:center">
-	<div style="background-color:#000000;">0: #000000</div>
-	<div style="background-color:#322001;">10: #322001</div>
-	<div style="background-color:#644002;">20: #644002</div>
-	<div style="background-color:#976002;">30: #976002</div>
-	<div style="background-color:#c98003;">40: #c98003</div>
-	<div style="background-color:#fba004;color:black;">50: #fba004</div>
-	<div style="background-color:#fcb336;color:black;">60: #fcb336</div>
-	<div style="background-color:#fdc668;color:black;">70: #fdc668</div>
-	<div style="background-color:#fdd99b;color:black">80: #fdd99b</div>
-	<div style="background-color:#feeccd;color:black;">85: #feeccd</div>
-	<div style="background-color:#fff6e6;color:black;">90: #fff6e6</div>
-	<div style="background-color:#fffdfa;color:black;">95: #fffdfa</div>
-	<div style="background-color:#ffffff;color:black;">100: #ffffff</div>
-</div>
+-   ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `#000000`
+-   ![#322001](https://via.placeholder.com/15/322001/000000?text=+) `#322001`
+-   ![#644002](https://via.placeholder.com/15/644002/000000?text=+) `#644002`
+-   ![#976002](https://via.placeholder.com/15/976002/000000?text=+) `#976002`
+-   ![#c98003](https://via.placeholder.com/15/c98003/000000?text=+) `#c98003`
+-   ![#fba004](https://via.placeholder.com/15/fba004/000000?text=+) `#fba004`
+-   ![#fcb336](https://via.placeholder.com/15/fcb336/000000?text=+) `#fcb336`
+-   ![#fdc668](https://via.placeholder.com/15/fdc668/000000?text=+) `#fdc668`
+-   ![#fdd99b](https://via.placeholder.com/15/fdd99b/000000?text=+) `#fdd99b`
+-   ![#feeccd](https://via.placeholder.com/15/feeccd/000000?text=+) `#feeccd`
+-   ![#fff6e6](https://via.placeholder.com/15/fff6e6/000000?text=+) `#fff6e6`
+-   ![#fffdfa](https://via.placeholder.com/15/fffdfa/000000?text=+) `#fffdfa`
+-   ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
