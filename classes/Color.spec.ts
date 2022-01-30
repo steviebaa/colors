@@ -78,6 +78,11 @@ describe('Class Color', () => {
       color.set('rgb(30,30,30,1)');
       expect(color.opacityAsHex).toEqual('ff');
     });
+    it('should return an appropriate "on" color', () => {
+      const color = new Color('#448aff');
+      const onColor = color.on;
+      expect(onColor.hex).toEqual('#001333');
+    });
   });
 
   describe('setters', () => {

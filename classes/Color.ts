@@ -5,6 +5,7 @@ export class Color {
   private _opacity: number; // Opacity alone
   private _hsl: string; // Hsl string without opacity
   private _hsla: string; // Hsl string with opacity
+  private _on: Color; // An appropriate "on" color for this color
 
   constructor(color: string) {
     this._setAll(color);
@@ -75,6 +76,13 @@ export class Color {
   get opacityAsHex() {
     return fractionToHex(this._opacity);
   }
+  get on() {
+    if (!this._on) {
+      const onColor = get.onColor(this.hsl);
+      this._on = new Color(onColor);
+    }
+    return this._on;
+  }
 
   // SET PROPERTIES
   /** Set the red value of the color [0,255]. */
@@ -113,13 +121,13 @@ export class Color {
     this._hsla = hsl.to.hsla(this._hsl, this._opacity);
   };
 
-	/** Set the color from a string */
+  /** Set the color from a string */
   public set(color: string) {
     this._setAll(color);
     return this;
   }
 
-	/** Clone the color */
+  /** Clone the color */
   public clone() {
     return new Color(this._hsl);
   }
