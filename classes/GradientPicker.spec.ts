@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/no-explicit-any: 0 */
 import {GradientPicker} from './GradientPicker';
 
 describe('GradientPicker', () => {
@@ -47,6 +48,3 @@ describe('GradientPicker', () => {
     expect(mockGetImageData).toHaveBeenCalledTimes(1);
   });
 });
-// expect(picker.at(0)).toEqual('#ffa13f');
-// expect(picker.at(70)).toEqual('#fe3154');
-// expect(picker.at(100)).toEqual('#fe005f');

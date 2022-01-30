@@ -8,7 +8,6 @@ describe('Class TonalPalette', () => {
       const tonalPalette = new TonalPalette(color);
       expect(tonalPalette.keyColor).toEqual(color);
     });
-
     it('should get the tones', () => {
       const color = new Color('#680ce9');
       const tonalPalette = new TonalPalette(color);
@@ -29,15 +28,23 @@ describe('Class TonalPalette', () => {
         '#ffffff',
       ]);
     });
+
+    it('should get the correct "on" color', () => {
+      const tonalPalette = new TonalPalette(new Color('#448aff'));
+      expect(tonalPalette.tones[60].on.hex).toEqual('#001333');
+
+      const tonalPalette2 = new TonalPalette(new Color('#680ce9'));
+      expect(tonalPalette2.tones[50].on.hex).toEqual('#e2cffc');
+    });
   });
 
   it('should set the new palette', () => {
     const color = new Color('#680ce9');
     const tonalPalette = new TonalPalette(color);
-    
-		const newColor = new Color('#fba91a');
+
+    const newColor = new Color('#fba91a');
     tonalPalette.keyColor = newColor;
-    
+
     expect(tonalPalette.keyColor).toEqual(newColor);
   });
 });

@@ -40,6 +40,8 @@ const color = new Color('#fba91a');
   color.opacity
   /** Return the opacity in HEX representation. */
   color.opacityAsHex
+	/** Generates and returns an "on" color with sufficient contrast to the current color */
+	color.on
 
 // Setters
   /** Set the red value of the color [0,255]. */
@@ -150,6 +152,9 @@ ColorUtility.get.opacity;
 ColorUtility.get.hue;
 ColorUtility.get.saturation;
 ColorUtility.get.lightness;
+ColorUtility.get.luminance;
+ColorUtility.get.contrast;
+ColorUtility.get.onColor;
 ColorUtility.to.hex;
 ColorUtility.to.hsl;
 ColorUtility.to.rgb;
@@ -169,23 +174,28 @@ Create a palette of tones from one key color using the stops recommended my mate
 const keyColor = new Color('#fba91a');
 const palette = new TonalPalette(keyColor);
 
+/** The color used to generate the palette*/
 console.log(palette.keyColor);
-console.log(palette.tones);
+
 /* 
 An object where the keys are the tones (E.g. 40) and the value is an instance of the Color Class.
 */
+console.log(palette.tones);
+
+/** The on color */
+console.log(palette.tones[40].on.hex);
 ```
 
--   ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `#000000`
--   ![#322001](https://via.placeholder.com/15/322001/000000?text=+) `#322001`
--   ![#644002](https://via.placeholder.com/15/644002/000000?text=+) `#644002`
--   ![#976002](https://via.placeholder.com/15/976002/000000?text=+) `#976002`
--   ![#c98003](https://via.placeholder.com/15/c98003/000000?text=+) `#c98003`
--   ![#fba004](https://via.placeholder.com/15/fba004/000000?text=+) `#fba004`
--   ![#fcb336](https://via.placeholder.com/15/fcb336/000000?text=+) `#fcb336`
--   ![#fdc668](https://via.placeholder.com/15/fdc668/000000?text=+) `#fdc668`
--   ![#fdd99b](https://via.placeholder.com/15/fdd99b/000000?text=+) `#fdd99b`
--   ![#feeccd](https://via.placeholder.com/15/feeccd/000000?text=+) `#feeccd`
--   ![#fff6e6](https://via.placeholder.com/15/fff6e6/000000?text=+) `#fff6e6`
--   ![#fffdfa](https://via.placeholder.com/15/fffdfa/000000?text=+) `#fffdfa`
--   ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
+- ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `#000000`
+- ![#322001](https://via.placeholder.com/15/322001/000000?text=+) `#322001`
+- ![#644002](https://via.placeholder.com/15/644002/000000?text=+) `#644002`
+- ![#976002](https://via.placeholder.com/15/976002/000000?text=+) `#976002`
+- ![#c98003](https://via.placeholder.com/15/c98003/000000?text=+) `#c98003`
+- ![#fba004](https://via.placeholder.com/15/fba004/000000?text=+) `#fba004`
+- ![#fcb336](https://via.placeholder.com/15/fcb336/000000?text=+) `#fcb336`
+- ![#fdc668](https://via.placeholder.com/15/fdc668/000000?text=+) `#fdc668`
+- ![#fdd99b](https://via.placeholder.com/15/fdd99b/000000?text=+) `#fdd99b`
+- ![#feeccd](https://via.placeholder.com/15/feeccd/000000?text=+) `#feeccd`
+- ![#fff6e6](https://via.placeholder.com/15/fff6e6/000000?text=+) `#fff6e6`
+- ![#fffdfa](https://via.placeholder.com/15/fffdfa/000000?text=+) `#fffdfa`
+- ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
