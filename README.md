@@ -40,8 +40,8 @@ const color = new Color('#fba91a');
   color.opacity
   /** Return the opacity in HEX representation. */
   color.opacityAsHex
-	/** Generates and returns an "on" color with sufficient contrast to the current color */
-	color.on
+  /** Generates and returns an "on" color with sufficient contrast to the current color */
+  color.on
 
 // Setters
   /** Set the red value of the color [0,255]. */
@@ -177,9 +177,7 @@ const palette = new TonalPalette(keyColor);
 /** The color used to generate the palette*/
 console.log(palette.keyColor);
 
-/* 
-An object where the keys are the tones (E.g. 40) and the value is an instance of the Color Class.
-*/
+/* An object where the keys are the tones (E.g. 40) and the value is an instance of the Color Class. */
 console.log(palette.tones);
 
 /** The on color */
