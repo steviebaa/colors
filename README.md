@@ -58,6 +58,8 @@ const color = new Color('#fba91a');
   color.lightness = ...
   /** Set the opacity [0,1]. */
   color.opacity = ...
+  /** Manually overwrite the on color. */
+  color.on
 
 // Methods
   color.set = "#448aff"
